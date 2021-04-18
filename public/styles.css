@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --primary: #ffab73;
+    --secondary: #ffd384;
+    --tertiary: #fff9b0;
+    --light: #ffaec0;
+    --font: 'Inconsolata', monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #ffd384;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffab73;
+    width: 100vw;
+    height: 60px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.currentTime {
+    margin-right: 120px;
+}
+
+.currentTime>h4 {
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--font);
+}
+
+header h1 {
+    color: #fff;
+    margin-left: 60px;
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 769px) {
+    header {
+        height: 50px;
+    }
+    header h1 {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .currentTime {
+        margin-right: 20px;
+    }
+    .currentTime>h4 {
+        font-size: 16px;
+    }
+}
+
+footer {
+    background-color: #ffab73;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+}
+
+footer p {
+    margin-top: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.note {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px #444;
+    padding: 10px;
+    min-width: 240px;
+    max-width: 400px;
+    margin: 16px;
+    float: left;
+    position: relative;
+}
+
+.timeStamp {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 10px;
+    color: rgb(53, 53, 53);
+}
+
+.note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #ffaec0;
+    border: none;
+    width: 36px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+@media screen and (max-width: 769px) {}
+
+form.create-note {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input,
+form.create-note textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form.create-note button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: #ffaec0;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+}
+
+@media screen and (max-width: 769px) {
+    form.create-note {
+        width: 280px;
+        padding: 8px;
+    }
+    form.create-note input,
+    form.create-note textarea {
+        width: 100%;
+        font-size: .9rem;
+        padding: 2px;
+    }
+}
