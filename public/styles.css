@@ -13,12 +13,16 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: "Montserrat", sans-serif;
+.App {
+    display: flex;
+    background: #ffd384;
+    min-height: 100vh;
+    flex-direction: column;
+    height: fit-content;
 }
 
-body {
-    background: #ffd384;
+.main-content {
+    flex: 1;
 }
 
 header {
@@ -66,16 +70,24 @@ header h1 {
 
 footer {
     background-color: #ffab73;
-    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 7rem;
+}
+
+footer h5 {
     text-align: center;
-    bottom: 0;
-    width: 100%;
-    height: 5rem;
+    margin-bottom: -20px;
+    font-size: 18px;
+    width: 60%;
 }
 
 footer p {
-    margin-top: 2rem;
-    color: #fff;
+    margin-top: -10px;
+    font-style: italic;
+    font-size: 14px;
+    color: #181818;
     font-weight: 600;
 }
 
@@ -118,13 +130,19 @@ footer p {
     margin-right: 10px;
     color: #ffaec0;
     border: none;
-    width: 36px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
     outline: none;
 }
 
-@media screen and (max-width: 769px) {}
+@media screen and (max-width: 769px) {
+    .note {
+        margin-left: 30%;
+        min-width: 200px;
+        max-width: 300px;
+    }
+}
 
 form.create-note {
     position: relative;
